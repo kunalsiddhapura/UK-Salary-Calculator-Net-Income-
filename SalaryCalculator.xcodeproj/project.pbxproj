@@ -1,0 +1,418 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		353ABC801D492EF100F06C27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353ABC7F1D492EF100F06C27 /* AppDelegate.swift */; };
+		353ABC821D492EF100F06C27 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353ABC811D492EF100F06C27 /* ViewController.swift */; };
+		353ABC851D492EF100F06C27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 353ABC831D492EF100F06C27 /* Main.storyboard */; };
+		353ABC871D492EF200F06C27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 353ABC861D492EF200F06C27 /* Assets.xcassets */; };
+		353ABC8A1D492EF200F06C27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 353ABC881D492EF200F06C27 /* LaunchScreen.storyboard */; };
+		353ABC921D492F2D00F06C27 /* SalaryCalculatorBrains.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353ABC911D492F2D00F06C27 /* SalaryCalculatorBrains.swift */; };
+		35880C171D64E01D00FF840D /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35880C161D64E01D00FF840D /* SettingsController.swift */; };
+		35D327561D762AE7002102B5 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D327551D762AE7002102B5 /* Charts.framework */; };
+		35D327571D762AE7002102B5 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 35D327551D762AE7002102B5 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6858A0B6246081D120F29E59 /* Pods_SalaryCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 417C702D3A4DF8CDE1205046 /* Pods_SalaryCalculator.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		35D327581D762AE7002102B5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				35D327571D762AE7002102B5 /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1F1F5ADC917466E8BFE963F3 /* Pods-SalaryCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SalaryCalculator.release.xcconfig"; path = "Pods/Target Support Files/Pods-SalaryCalculator/Pods-SalaryCalculator.release.xcconfig"; sourceTree = "<group>"; };
+		353ABC7C1D492EF100F06C27 /* SalaryCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SalaryCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		353ABC7F1D492EF100F06C27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		353ABC811D492EF100F06C27 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		353ABC841D492EF100F06C27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		353ABC861D492EF200F06C27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		353ABC891D492EF200F06C27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		353ABC8B1D492EF200F06C27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		353ABC911D492F2D00F06C27 /* SalaryCalculatorBrains.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalaryCalculatorBrains.swift; sourceTree = SOURCE_ROOT; };
+		35880C161D64E01D00FF840D /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		35D327551D762AE7002102B5 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Charts.framework; path = "/Users/kunalsiddhapura/Library/Developer/Xcode/DerivedData/SalaryCalculator-diuzlqludzagzvffioqxkibvnjxo/Build/Products/Debug-iphonesimulator/Charts/Charts.framework"; sourceTree = "<absolute>"; };
+		35D327591D763343002102B5 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Charts.framework; path = "/Users/kunalsiddhapura/Library/Developer/Xcode/DerivedData/SalaryCalculator-diuzlqludzagzvffioqxkibvnjxo/Build/Products/Debug-iphoneos/Charts/Charts.framework"; sourceTree = "<absolute>"; };
+		417C702D3A4DF8CDE1205046 /* Pods_SalaryCalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SalaryCalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		426740C4BE4484363FBCAEDD /* Pods-SalaryCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SalaryCalculator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SalaryCalculator/Pods-SalaryCalculator.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		353ABC791D492EF100F06C27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6858A0B6246081D120F29E59 /* Pods_SalaryCalculator.framework in Frameworks */,
+				35D327561D762AE7002102B5 /* Charts.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06C17E07CA86ABC47C8B8705 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				426740C4BE4484363FBCAEDD /* Pods-SalaryCalculator.debug.xcconfig */,
+				1F1F5ADC917466E8BFE963F3 /* Pods-SalaryCalculator.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		353ABC731D492EF100F06C27 = {
+			isa = PBXGroup;
+			children = (
+				35D327591D763343002102B5 /* Charts.framework */,
+				35D327551D762AE7002102B5 /* Charts.framework */,
+				353ABC7E1D492EF100F06C27 /* SalaryCalculator */,
+				353ABC7D1D492EF100F06C27 /* Products */,
+				06C17E07CA86ABC47C8B8705 /* Pods */,
+				5ECA4605B20EF71E11F1BD7C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		353ABC7D1D492EF100F06C27 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				353ABC7C1D492EF100F06C27 /* SalaryCalculator.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		353ABC7E1D492EF100F06C27 /* SalaryCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				353ABC7F1D492EF100F06C27 /* AppDelegate.swift */,
+				353ABC911D492F2D00F06C27 /* SalaryCalculatorBrains.swift */,
+				353ABC811D492EF100F06C27 /* ViewController.swift */,
+				35880C161D64E01D00FF840D /* SettingsController.swift */,
+				353ABC831D492EF100F06C27 /* Main.storyboard */,
+				353ABC861D492EF200F06C27 /* Assets.xcassets */,
+				358423671D59045600DD6E09 /* Hidden */,
+			);
+			path = SalaryCalculator;
+			sourceTree = "<group>";
+		};
+		358423671D59045600DD6E09 /* Hidden */ = {
+			isa = PBXGroup;
+			children = (
+				353ABC881D492EF200F06C27 /* LaunchScreen.storyboard */,
+				353ABC8B1D492EF200F06C27 /* Info.plist */,
+			);
+			name = Hidden;
+			sourceTree = "<group>";
+		};
+		5ECA4605B20EF71E11F1BD7C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				417C702D3A4DF8CDE1205046 /* Pods_SalaryCalculator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		353ABC7B1D492EF100F06C27 /* SalaryCalculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 353ABC8E1D492EF200F06C27 /* Build configuration list for PBXNativeTarget "SalaryCalculator" */;
+			buildPhases = (
+				E535378733F586CC8299F821 /* [CP] Check Pods Manifest.lock */,
+				353ABC781D492EF100F06C27 /* Sources */,
+				353ABC791D492EF100F06C27 /* Frameworks */,
+				353ABC7A1D492EF100F06C27 /* Resources */,
+				E94D53C1A8FDD7ADE264A5E9 /* [CP] Embed Pods Frameworks */,
+				042FC9B9B09CB6064FFD3FBE /* [CP] Copy Pods Resources */,
+				35D327581D762AE7002102B5 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SalaryCalculator;
+			productName = SalaryCalculator;
+			productReference = 353ABC7C1D492EF100F06C27 /* SalaryCalculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		353ABC741D492EF100F06C27 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Kunal Siddhapura";
+				TargetAttributes = {
+					353ABC7B1D492EF100F06C27 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = FV9V2BSTV7;
+					};
+				};
+			};
+			buildConfigurationList = 353ABC771D492EF100F06C27 /* Build configuration list for PBXProject "SalaryCalculator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 353ABC731D492EF100F06C27;
+			productRefGroup = 353ABC7D1D492EF100F06C27 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				353ABC7B1D492EF100F06C27 /* SalaryCalculator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		353ABC7A1D492EF100F06C27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				353ABC8A1D492EF200F06C27 /* LaunchScreen.storyboard in Resources */,
+				353ABC871D492EF200F06C27 /* Assets.xcassets in Resources */,
+				353ABC851D492EF100F06C27 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		042FC9B9B09CB6064FFD3FBE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SalaryCalculator/Pods-SalaryCalculator-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E535378733F586CC8299F821 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E94D53C1A8FDD7ADE264A5E9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SalaryCalculator/Pods-SalaryCalculator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		353ABC781D492EF100F06C27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35880C171D64E01D00FF840D /* SettingsController.swift in Sources */,
+				353ABC921D492F2D00F06C27 /* SalaryCalculatorBrains.swift in Sources */,
+				353ABC821D492EF100F06C27 /* ViewController.swift in Sources */,
+				353ABC801D492EF100F06C27 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		353ABC831D492EF100F06C27 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				353ABC841D492EF100F06C27 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		353ABC881D492EF200F06C27 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				353ABC891D492EF200F06C27 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		353ABC8C1D492EF200F06C27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		353ABC8D1D492EF200F06C27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		353ABC8F1D492EF200F06C27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 426740C4BE4484363FBCAEDD /* Pods-SalaryCalculator.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = SalaryCalculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.uk.siddhapura.SalaryCalculator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		353ABC901D492EF200F06C27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F1F5ADC917466E8BFE963F3 /* Pods-SalaryCalculator.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = SalaryCalculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.uk.siddhapura.SalaryCalculator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		353ABC771D492EF100F06C27 /* Build configuration list for PBXProject "SalaryCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				353ABC8C1D492EF200F06C27 /* Debug */,
+				353ABC8D1D492EF200F06C27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		353ABC8E1D492EF200F06C27 /* Build configuration list for PBXNativeTarget "SalaryCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				353ABC8F1D492EF200F06C27 /* Debug */,
+				353ABC901D492EF200F06C27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 353ABC741D492EF100F06C27 /* Project object */;
+}
