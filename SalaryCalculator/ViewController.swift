@@ -197,7 +197,7 @@ class ViewController: UIViewController {
     pieChartDisplay.drawCenterTextEnabled = false
     
     pieChartDisplay.drawSliceTextEnabled = false
-    pieChartDisplay.holeRadiusPercent = 0.75
+    pieChartDisplay.holeRadiusPercent = 0.5
     
     var dataEntries: [ChartDataEntry] = []
     
