@@ -192,9 +192,11 @@ class ViewController: UIViewController {
     pieChartDisplay.highlightPerTapEnabled = false
     pieChartDisplay.autoresizesSubviews = true
     pieChartDisplay.rotationEnabled = false
-    pieChartDisplay.userInteractionEnabled = false
+    pieChartDisplay.userInteractionEnabled = true
+    pieChartDisplay.rotationWithTwoFingers = true
     
-    
+    pieChartDisplay.drawSliceTextEnabled = false
+    pieChartDisplay.holeRadiusPercent = 0.75
     
     var dataEntries: [ChartDataEntry] = []
     
@@ -207,9 +209,10 @@ class ViewController: UIViewController {
     let pieChartData = PieChartData(xVals: dataPoints, dataSet: pieChartDataSet)
     pieChartDisplay.data = pieChartData
     
-    pieChartDataSet.xValuePosition = .OutsideSlice
-    pieChartDataSet.selectionShift = 2.5
-    pieChartDataSet.sliceSpace = 2.5
+    pieChartDataSet.xValuePosition = .InsideSlice
+    pieChartDataSet.selectionShift = 0
+    pieChartDataSet.sliceSpace = 5
+    
     //pieChartDisplay.legend.position = .PiechartCenter   ???depraacted????
     pieChartDataSet.colors = ChartColorTemplates.material()
     /*
