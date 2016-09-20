@@ -174,6 +174,8 @@ class ViewController: UIViewController {
   func test() {
     
   }
+  
+  
 
   func setChart(dataPoints: [String], values: [Double], centre: Float) {
     
@@ -189,7 +191,9 @@ class ViewController: UIViewController {
     pieChartDisplay.legend.enabled = false
     pieChartDisplay.highlightPerTapEnabled = false
     pieChartDisplay.autoresizesSubviews = true
-    //pieChartView.rotationEnabled = false
+    pieChartDisplay.rotationEnabled = false
+    pieChartDisplay.userInteractionEnabled = false
+    
     
     
     var dataEntries: [ChartDataEntry] = []
