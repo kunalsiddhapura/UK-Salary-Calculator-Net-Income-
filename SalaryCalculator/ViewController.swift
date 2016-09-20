@@ -184,16 +184,17 @@ class ViewController: UIViewController {
     //pieChartDisplay.userInteractionEnabled = false
     
     pieChartDisplay.animate(yAxisDuration: 0.50)
-    pieChartDisplay.centerText = "£"+String(centre)
+    //pieChartDisplay.centerText = "£"+String(centre)
     pieChartDisplay.drawHoleEnabled = true
     pieChartDisplay.drawSlicesUnderHoleEnabled = true
     pieChartDisplay.usePercentValuesEnabled = true
     pieChartDisplay.legend.enabled = false
     pieChartDisplay.highlightPerTapEnabled = false
-    pieChartDisplay.autoresizesSubviews = true
+    //pieChartDisplay.autoresizesSubviews = true
     pieChartDisplay.rotationEnabled = false
-    pieChartDisplay.userInteractionEnabled = true
-    pieChartDisplay.rotationWithTwoFingers = true
+    pieChartDisplay.userInteractionEnabled = false
+    pieChartDisplay.rotationWithTwoFingers = false
+    pieChartDisplay.drawCenterTextEnabled = false
     
     pieChartDisplay.drawSliceTextEnabled = false
     pieChartDisplay.holeRadiusPercent = 0.75
@@ -213,13 +214,16 @@ class ViewController: UIViewController {
     pieChartDataSet.selectionShift = 0
     pieChartDataSet.sliceSpace = 5
     
-    //pieChartDisplay.legend.position = .PiechartCenter   ???depraacted????
+    pieChartDisplay.legend.position = .PiechartCenter
     pieChartDataSet.colors = ChartColorTemplates.material()
-    /*
+    
     let legend = pieChartDisplay.legend
     legend.enabled = true
     legend.drawInside = true
-     */
+    
+    //pieChartDisplay.saveToCameraRoll()
+    
+    
   }
 
 }

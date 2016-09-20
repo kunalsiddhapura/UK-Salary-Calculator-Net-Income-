@@ -141,7 +141,7 @@
                                         <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleAspectFit" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YWs-wS-qob" customClass="PieChartView" customModule="Charts">
+                                    <view userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YWs-wS-qob" customClass="PieChartView" customModule="Charts">
                                         <rect key="frame" x="0.0" y="263" width="375" height="341"/>
                                         <color key="backgroundColor" red="0.90588235294117647" green="0.92549019607843142" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
