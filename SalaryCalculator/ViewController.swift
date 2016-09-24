@@ -20,6 +20,10 @@ class ViewController: UIViewController {
     NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.changeLabelsOnSegment), name: changeOfWeeklyOptionKey, object: nil)
     
     doCalculations()
+    
+    UserPrefs.hoursPerWeek = savedSettings.floatForKey("hoursPerWeek")
+    UserPrefs.daysPerWeek  = savedSettings.floatForKey("daysPerWeek")
+    UserPrefs.pensionContribution = savedSettings.floatForKey("pensionContribution")
   }
   
   let currencyFormatDisplay = NSNumberFormatter()
@@ -86,13 +90,16 @@ class ViewController: UIViewController {
     var displayDataValues = [Double]()
     
     //need to aarange order for consistent PI Chart Colors!!!!
-    
+    if annualNetIncome > 0 {
+      displayDataTypes.append("Net Income")
+      displayDataValues.append(Double(annualNetIncome))
+    }
     if annualTaxPaid > 0 {
       displayDataTypes.append("Tax Paid")
       displayDataValues.append(Double(annualTaxPaid))
     }
     if annualNIContributions > 0 {
-      displayDataTypes.append("National Insurance")
+      displayDataTypes.append("N.I.")
       displayDataValues.append(Double(annualNIContributions))
     }
     if annualStudentLoan > 0 {
@@ -103,11 +110,12 @@ class ViewController: UIViewController {
       displayDataTypes.append("Pension")
       displayDataValues.append(Double(annualPensionPaid))
     }
-    if annualNetIncome > 0 {
-      displayDataTypes.append("Net Income")
-      displayDataValues.append(Double(annualNetIncome))
+    
+    if annualNetIncome == 0 {
+      displayDataTypes.append(("Net Income"))
+      displayDataValues.append(1.0)
     }
-    setChart(displayDataTypes, values: displayDataValues, centre: annualSalary)
+    setChart(displayDataTypes, values: displayDataValues)
   }
   
   func changeLabelsOnSegment() {
@@ -170,34 +178,11 @@ class ViewController: UIViewController {
     shareSheet.addAction(cancelAction)
     self.presentViewController(shareSheet, animated: true, completion: nil)
   }
-  
-  func test() {
-    
-  }
-  
-  
 
-  func setChart(dataPoints: [String], values: [Double], centre: Float) {
+  func setChart(dataPoints: [String], values: [Double]) {
     
     
-    pieChartDisplay.descriptionText = ""
-    //pieChartDisplay.userInteractionEnabled = false
     
-    pieChartDisplay.animate(yAxisDuration: 0.50)
-    //pieChartDisplay.centerText = "£"+String(centre)
-    pieChartDisplay.drawHoleEnabled = true
-    pieChartDisplay.drawSlicesUnderHoleEnabled = true
-    pieChartDisplay.usePercentValuesEnabled = true
-    pieChartDisplay.legend.enabled = false
-    pieChartDisplay.highlightPerTapEnabled = false
-    //pieChartDisplay.autoresizesSubviews = true
-    pieChartDisplay.rotationEnabled = false
-    pieChartDisplay.userInteractionEnabled = false
-    pieChartDisplay.rotationWithTwoFingers = false
-    pieChartDisplay.drawCenterTextEnabled = false
-    
-    pieChartDisplay.drawSliceTextEnabled = false
-    pieChartDisplay.holeRadiusPercent = 0.5
     
     var dataEntries: [ChartDataEntry] = []
     
@@ -207,19 +192,45 @@ class ViewController: UIViewController {
     }
     
     let pieChartDataSet = PieChartDataSet(yVals: dataEntries, label: nil)
+    pieChartDataSet.colors = ChartColorTemplates.material()
     let pieChartData = PieChartData(xVals: dataPoints, dataSet: pieChartDataSet)
+    
     pieChartDisplay.data = pieChartData
+    
+    pieChartDisplay.descriptionText = "" // Makes sure no description is shown
+    pieChartDisplay.usePercentValuesEnabled = true // Shows Percentages in Segments
+
+    pieChartDisplay.animate(yAxisDuration: 0.5, easingOption: .EaseOutBack) // Animation of Pie Chart
+    pieChartDisplay.drawHoleEnabled = true // Makes sure to draw Donut Chart
+    pieChartDisplay.drawSliceTextEnabled = false
+    pieChartDisplay.transparentCircleRadiusPercent = 0.65
+    pieChartDisplay.holeRadiusPercent = 0.60
     
     pieChartDataSet.xValuePosition = .InsideSlice
     pieChartDataSet.selectionShift = 0
     pieChartDataSet.sliceSpace = 5
     
-    pieChartDisplay.legend.position = .PiechartCenter
-    pieChartDataSet.colors = ChartColorTemplates.material()
+    
     
     let legend = pieChartDisplay.legend
-    legend.enabled = true
+    
+    if dataPoints.count == 1 {
+      pieChartDataSet.drawValuesEnabled = false
+      legend.enabled = false
+      pieChartDisplay.centerText = "Net Income"
+    }
+    else {
+      legend.enabled = true
+    }
+    legend.orientation = .Vertical
     legend.drawInside = true
+    legend.horizontalAlignment = .Center
+    legend.verticalAlignment = .Center
+    legend.formSize = 20
+    legend.form = .Circle
+    
+   
+
     
     //pieChartDisplay.saveToCameraRoll()
     

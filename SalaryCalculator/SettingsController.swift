@@ -11,7 +11,19 @@ import Foundation
 
 let settingsSyncNotificationKey = "salaryCalculator.specialNotificationKey"
 let changeOfWeeklyOptionKey = "salaryCalculator.changeOfWeeklyOptionsKey"
+
+var savedSettings = NSUserDefaults.standardUserDefaults()
+
 class SettingsController: UIViewController {
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+    hoursPerWeekEntry.text = String(savedSettings.floatForKey("hoursPerWeek"))
+    daysPerWeekEntry.text = String(savedSettings.floatForKey("daysPerWeek"))
+    pensionContributionEntry.text = String(savedSettings.floatForKey("pensionContribution"))
+
+  }
   
   @IBOutlet weak var hoursPerWeekEntry: UITextField!
   @IBOutlet weak var daysPerWeekEntry: UITextField!
@@ -49,6 +61,9 @@ class SettingsController: UIViewController {
     daysPerWeekEntry.resignFirstResponder()
     pensionContributionEntry.resignFirstResponder()
     
+
+    
+    
     let hoursPerWeek = Float(hoursPerWeekEntry.text!) ?? 37
     let daysPerWeek = Float(daysPerWeekEntry.text!) ?? 5
     let pensionContribution = Float(pensionContributionEntry.text!) ?? 0
@@ -67,9 +82,18 @@ class SettingsController: UIViewController {
     
     let ageSelected = ageOption.selectedSegmentIndex
     
-    UserPrefs.hoursPerWeek = hoursPerWeek
-    UserPrefs.daysPerWeek = daysPerWeek
-    UserPrefs.pensionContribution = pensionContribution / 100
+    
+    savedSettings.setFloat(hoursPerWeek, forKey: "hoursPerWeek")
+    savedSettings.setFloat(daysPerWeek, forKey: "daysPerWeek")
+    savedSettings.setFloat((pensionContribution/100), forKey: "pensionContribution")
+    
+    
+    UserPrefs.hoursPerWeek = savedSettings.floatForKey("hoursPerWeek")
+    UserPrefs.daysPerWeek = savedSettings.floatForKey("daysPerWeek")
+    UserPrefs.pensionContribution = savedSettings.floatForKey("pensionContributions")
+    //UserPrefs.hoursPerWeek = hoursPerWeek
+    //UserPrefs.daysPerWeek = daysPerWeek
+    //UserPrefs.pensionContribution = pensionContribution / 100
     UserPrefs.studentLoanOption = studentLoanPlan
     UserPrefs.weeksOption = weeksOptionSelected
     UserPrefs.nationalInsuranceOption = payingNIOptionSelected
